@@ -1,0 +1,55 @@
+Threat Hunting Investigation
+Objective
+You are a Security Analyst tasked with investigating suspicious activity using system logs.
+Your goal is to:
+Identify malicious behaviour
+Build a threat hunting hypothesis
+Reconstruct the attack
+Recommend response actions
+Dataset
+Analyse the following logs:
+2026-04-30 08:55:12 LOGIN_SUCCESS user=john ip=102.89.34.12 location=Abuja
+2026-04-30 09:02:45 LOGIN_FAILED user=john ip=185.203.116.45 location=Germany
+2026-04-30 09:03:01 LOGIN_FAILED user=john ip=185.203.116.45 location=Germany
+2026-04-30 09:04:10 LOGIN_SUCCESS user=john ip=185.203.116.45 location=Germany
+2026-04-30 09:06:15 PROCESS_START user=john process=powershell.exe -nop -w hidden
+2026-04-30 09:07:10 PROCESS_START user=john process=whoami.exe
+2026-04-30 09:08:30 PROCESS_START user=john process=ipconfig
+2026-04-30 09:09:10 OUTBOUND_CONNECTION src=192.168.1.10 dst=45.77.12.90 port=443
+2026-04-30 09:10:05 DATA_TRANSFER src=192.168.1.10 dst=45.77.12.90 size=12MB
+
+Tasks
+Task 1 – Identify Suspicious Activity
+List at least 5 suspicious events from the logs.
+Task 2 – Build a Hypothesis
+Write a threat hunting hypothesis using this format:
+“If __ occurs, it may indicate __.”
+Task 3 – Attack Timeline
+Reconstruct the attack step-by-step.
+Format:
+ 
+Initial activity
+ 
+Suspicious behaviour
+ 
+Compromise
+ 
+Post-compromise actions
+ 
+Final objective
+Task 4 – Indicators of Compromise (IOCs)
+Extract at least 5 IOCs from the logs.
+Examples:
+IP addresses
+Commands
+Task 5 – Analyst Actions
+As a security analyst, explain what you would do:
+Immediate actions
+(e.g., isolate system)
+Investigation actions
+(e.g., check logs, identify scope)
+Prevention actions
+(e.g., enable MFA)
+Task 6 – Threat Hunting Extension
+Assume this attacker is still in the network.
+What additional logs or data would you check to continue hunting?
